@@ -276,23 +276,11 @@ main {
   border-radius: var(--radius-xl);
 }
 
-.hero-panel-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  align-items: center;
-}
-
-.panel-title {
-  font-size: 1.24rem;
-  font-weight: 700;
-}
-
 .panel-stats {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
-  margin-top: 22px;
+  margin-top: 4px;
 }
 
 .panel-stats article {
@@ -447,8 +435,8 @@ main {
 }
 
 .project-card--compact .project-overlay {
-  gap: 8px;
-  padding: 18px;
+  gap: 5px;
+  padding: 16px;
 }
 
 .project-card--compact .project-overlay strong {
@@ -484,29 +472,22 @@ main {
   position: absolute;
   inset: auto 0 0;
   display: grid;
-  gap: 10px;
-  padding: 22px;
+  gap: 6px;
+  padding: 18px;
   color: var(--sand);
   background:
     linear-gradient(180deg, rgba(8, 10, 8, 0.03), rgba(8, 10, 8, 0.82) 60%),
     linear-gradient(180deg, transparent, rgba(8, 10, 8, 0.74));
 }
 
-.project-overlay .overlay-label,
-.project-overlay small {
-  color: rgba(247, 242, 232, 0.75);
+.project-overlay .overlay-label {
+  color: rgba(247, 242, 232, 0.72);
 }
 
 .project-overlay strong {
   font-family: "Noto Serif SC", serif;
   font-size: clamp(1.2rem, 2vw, 1.8rem);
   line-height: 1.32;
-}
-
-.project-overlay small {
-  font-size: 0.74rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
 }
 
 .project-play {
@@ -523,6 +504,18 @@ main {
   font-weight: 700;
   cursor: pointer;
   transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.project-play--inline {
+  border-color: rgba(31, 33, 29, 0.12);
+  background: rgba(110, 137, 84, 0.08);
+  color: var(--ink);
+}
+
+.project-play--inline:hover,
+.project-play--inline:focus-visible {
+  background: rgba(110, 137, 84, 0.14);
+  border-color: rgba(31, 33, 29, 0.2);
 }
 
 .project-play:hover,
