@@ -149,8 +149,8 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
-  gap: 34px;
+  grid-template-columns: minmax(0, 1.22fr) minmax(280px, 0.58fr);
+  gap: 42px;
   min-height: calc(100vh - 92px);
   align-items: end;
   padding-top: 94px;
@@ -276,15 +276,15 @@ main {
   align-self: end;
   justify-self: end;
   width: 100%;
-  max-width: 760px;
-  padding: 18px;
+  max-width: 680px;
+  padding: 14px;
   border-radius: var(--radius-xl);
 }
 
 .hero-panel-shell {
   display: grid;
-  gap: 18px;
-  padding: 22px;
+  gap: 16px;
+  padding: 18px;
   border-radius: 34px;
   background:
     radial-gradient(circle at top right, rgba(201, 214, 188, 0.34), transparent 34%),
@@ -302,13 +302,13 @@ main {
 .hero-chip {
   display: inline-flex;
   align-items: center;
-  min-height: 46px;
-  padding: 0 20px;
+  min-height: 42px;
+  padding: 0 18px;
   border-radius: 999px;
   border: 1px solid rgba(31, 33, 29, 0.12);
   background: rgba(255, 255, 255, 0.62);
-  font-size: 0.82rem;
-  letter-spacing: 0.26em;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(31, 33, 29, 0.56);
 }
@@ -320,15 +320,15 @@ main {
 
 .hero-panel-grid {
   display: grid;
-  grid-template-columns: minmax(190px, 0.58fr) minmax(0, 1.42fr);
-  gap: 18px;
+  grid-template-columns: minmax(156px, 0.52fr) minmax(0, 1.48fr);
+  gap: 16px;
 }
 
 .hero-panel-manifesto,
 .hero-panel-directory {
   position: relative;
   overflow: hidden;
-  padding: 24px;
+  padding: 20px;
   border-radius: 30px;
   border: 1px solid rgba(31, 33, 29, 0.08);
   background: rgba(255, 255, 255, 0.48);
@@ -347,9 +347,9 @@ main {
 
 .hero-panel-manifesto h2 {
   margin-top: 16px;
-  max-width: 4ch;
-  font-size: clamp(1.7rem, 2.4vw, 2.95rem);
-  line-height: 1.06;
+  max-width: 3.7ch;
+  font-size: clamp(1.38rem, 1.9vw, 2.28rem);
+  line-height: 1.02;
   letter-spacing: -0.08em;
 }
 
@@ -366,16 +366,16 @@ main {
 
 .panel-links {
   display: grid;
-  gap: 12px;
-  margin-top: 18px;
+  gap: 10px;
+  margin-top: 14px;
 }
 
 .panel-link-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  padding: 16px 20px;
+  gap: 14px;
+  padding: 14px 18px;
   text-decoration: none;
   border: 1px solid rgba(31, 33, 29, 0.08);
   border-radius: 26px;
@@ -391,18 +391,18 @@ main {
 
 .panel-link-main {
   display: grid;
-  gap: 8px;
+  gap: 6px;
 }
 
 .panel-link-main strong {
   font-family: "Noto Serif SC", serif;
-  font-size: 1rem;
+  font-size: 0.94rem;
 }
 
 .panel-link-main em {
   font-style: normal;
-  font-size: 0.84rem;
-  letter-spacing: 0.18em;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: rgba(31, 33, 29, 0.42);
 }
@@ -411,9 +411,9 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 64px;
-  min-height: 40px;
-  padding: 0 14px;
+  min-width: 56px;
+  min-height: 36px;
+  padding: 0 12px;
   border-radius: 999px;
   border: 1px solid rgba(31, 33, 29, 0.1);
   color: rgba(31, 33, 29, 0.66);
@@ -422,8 +422,8 @@ main {
 
 .panel-note-box {
   display: grid;
-  gap: 14px;
-  padding: 22px 26px;
+  gap: 12px;
+  padding: 18px 22px;
   border-radius: 26px;
   border: 1px solid rgba(31, 33, 29, 0.08);
   background: rgba(255, 255, 255, 0.7);
@@ -431,7 +431,8 @@ main {
 
 .panel-note {
   color: var(--muted);
-  line-height: 1.95;
+  line-height: 1.85;
+  font-size: 0.94rem;
 }
 
 .panel-note-actions {
@@ -465,6 +466,11 @@ main {
 .section-heading-main p {
   max-width: 58ch;
   margin-top: 14px;
+}
+
+.section-copy-single {
+  max-width: none;
+  white-space: nowrap;
 }
 
 .rule {
@@ -902,6 +908,10 @@ main {
   text-decoration: none;
 }
 
+.contact-link--plain {
+  margin: 10px 0 0;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -951,6 +961,10 @@ main {
   .summary-split,
   .achievement-columns {
     grid-template-columns: 1fr;
+  }
+
+  .section-copy-single {
+    white-space: normal;
   }
 }
 
