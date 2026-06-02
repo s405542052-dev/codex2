@@ -315,7 +315,7 @@ main {
 
 .hero-panel-grid {
   display: grid;
-  grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.22fr);
+  grid-template-columns: minmax(220px, 0.68fr) minmax(0, 1.32fr);
   gap: 20px;
 }
 
@@ -342,9 +342,9 @@ main {
 
 .hero-panel-manifesto h2 {
   margin-top: 18px;
-  max-width: 5ch;
-  font-size: clamp(2.8rem, 4.6vw, 5rem);
-  line-height: 1.02;
+  max-width: 4ch;
+  font-size: clamp(1.95rem, 3vw, 3.5rem);
+  line-height: 1.08;
   letter-spacing: -0.08em;
 }
 
@@ -562,6 +562,31 @@ main {
   height: 100%;
   object-fit: cover;
   transform: scale(1.01);
+  transition: opacity 220ms ease;
+}
+
+.project-video-inline {
+  position: absolute;
+  inset: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #10110f;
+}
+
+.project-media.is-playing .project-video-inline {
+  display: block;
+}
+
+.project-media.is-playing .project-thumb,
+.project-media.is-playing .project-overlay strong,
+.project-media.is-playing .project-overlay .overlay-label {
+  opacity: 0;
+}
+
+.project-media.is-playing .project-overlay {
+  background: linear-gradient(180deg, rgba(8, 10, 8, 0.06), rgba(8, 10, 8, 0.3));
 }
 
 .project-overlay {
@@ -588,39 +613,52 @@ main {
 
 .project-play {
   justify-self: start;
-  min-height: 40px;
-  padding: 0 16px;
-  border: 1px solid rgba(247, 242, 232, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 56px;
+  padding: 0 12px 0 22px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 999px;
-  background: rgba(247, 242, 232, 0.14);
-  color: var(--sand);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
   font: inherit;
-  font-size: 0.88rem;
+  font-size: 1rem;
   font-weight: 700;
+  letter-spacing: -0.02em;
   cursor: pointer;
-  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .project-play--overlay {
-  margin-top: 10px;
-  padding: 0 18px 0 16px;
-  border-color: rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  margin-top: 16px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
 }
 
-.project-play--overlay::before {
+.project-play::after {
   content: "▶";
-  margin-right: 8px;
-  font-size: 0.76rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #6f8d53;
+  color: #fff;
+  font-size: 0.9rem;
+  flex: 0 0 auto;
+}
+
+.project-media.is-playing .project-play {
+  background: rgba(255, 255, 255, 0.82);
 }
 
 .project-play:hover,
 .project-play:focus-visible {
   transform: translateY(-1px);
-  background: rgba(247, 242, 232, 0.2);
-  border-color: rgba(247, 242, 232, 0.5);
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.16);
 }
 
 .project-content {
@@ -644,7 +682,7 @@ main {
 
 .resume-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
   margin-top: 28px;
 }
@@ -654,14 +692,26 @@ main {
   border-radius: var(--radius-lg);
 }
 
+.resume-grid--balanced .resume-card {
+  min-height: 100%;
+}
+
 .resume-card h3 {
   margin-top: 12px;
   font-size: 1.45rem;
   letter-spacing: -0.04em;
 }
 
-.resume-card-wide {
-  grid-column: span 3;
+.resume-card-feature {
+  display: grid;
+  align-content: start;
+}
+
+.summary-split,
+.achievement-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .achievements-card {
@@ -720,6 +770,37 @@ main {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
+}
+
+.achievement-grid--detail {
+  gap: 16px;
+}
+
+.achievement-scoreboard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.achievement-score {
+  padding: 18px;
+  border-radius: 24px;
+  border: 1px solid rgba(31, 33, 29, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(244, 239, 230, 0.72));
+}
+
+.achievement-score strong {
+  display: block;
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.achievement-score span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 .achievement-item {
@@ -826,74 +907,6 @@ main {
   color: var(--olive);
 }
 
-.video-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 60;
-  display: grid;
-  place-items: center;
-  padding: 20px;
-}
-
-.video-modal[hidden] {
-  display: none;
-}
-
-.video-backdrop {
-  position: absolute;
-  inset: 0;
-  border: 0;
-  background: rgba(10, 12, 10, 0.76);
-}
-
-.video-dialog {
-  position: relative;
-  z-index: 1;
-  width: min(960px, calc(100vw - 28px));
-  padding: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 28px;
-  background: rgba(21, 24, 21, 0.92);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.36);
-  color: var(--sand);
-}
-
-.video-dialog-head {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  align-items: center;
-}
-
-.video-dialog .card-kicker {
-  color: rgba(247, 242, 232, 0.55);
-}
-
-.video-dialog h3 {
-  margin-top: 10px;
-  font-size: clamp(1.4rem, 2vw, 2rem);
-}
-
-.video-close {
-  min-height: 38px;
-  padding: 0 14px;
-  border: 1px solid rgba(247, 242, 232, 0.18);
-  border-radius: 999px;
-  background: rgba(247, 242, 232, 0.08);
-  color: var(--sand);
-  font: inherit;
-  cursor: pointer;
-}
-
-.video-player {
-  display: block;
-  width: 100%;
-  margin-top: 16px;
-  border-radius: 18px;
-  background: #000;
-  aspect-ratio: 16 / 9;
-}
-
 @media (max-width: 1100px) {
   .hero,
   .section-heading,
@@ -919,12 +932,11 @@ main {
     grid-template-columns: 1fr 1fr;
   }
 
-  .resume-card-wide {
-    grid-column: span 2;
-  }
-
   .hero-panel-grid,
-  .achievement-grid {
+  .achievement-grid,
+  .achievement-scoreboard,
+  .summary-split,
+  .achievement-columns {
     grid-template-columns: 1fr;
   }
 }
@@ -961,10 +973,6 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .resume-card-wide {
-    grid-column: span 1;
-  }
-
   .panel-link-card {
     flex-direction: column;
     align-items: flex-start;
@@ -990,11 +998,6 @@ main {
   .project-overlay {
     padding: 18px;
   }
-
-  .video-dialog {
-    padding: 16px;
-  }
-
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
