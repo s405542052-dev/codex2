@@ -315,6 +315,7 @@ main {
   border: 1px solid rgba(31, 33, 29, 0.08);
   border-radius: 22px;
   background: rgba(110, 137, 84, 0.08);
+  line-height: 1.75;
   transition: transform 180ms ease, background 180ms ease, color 180ms ease;
 }
 
