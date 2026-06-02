@@ -282,15 +282,15 @@ main {
   justify-self: end;
   width: 100%;
   max-width: 1040px;
-  margin-top: 108px;
+  margin-top: 150px;
   padding: 6px;
   border-radius: var(--radius-xl);
 }
 
 .hero-panel-shell {
   display: grid;
-  gap: 4px;
-  padding: 4px 10px 6px;
+  gap: 8px;
+  padding: 12px 12px 14px;
   border-radius: 30px;
   background:
     radial-gradient(circle at top right, rgba(201, 214, 188, 0.34), transparent 34%),
@@ -308,12 +308,12 @@ main {
 .hero-chip {
   display: inline-flex;
   align-items: center;
-  min-height: 24px;
-  padding: 0 11px;
+  min-height: 28px;
+  padding: 0 13px;
   border-radius: 999px;
   border: 1px solid rgba(31, 33, 29, 0.12);
   background: rgba(255, 255, 255, 0.62);
-  font-size: 0.62rem;
+  font-size: 0.66rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: rgba(31, 33, 29, 0.56);
@@ -327,7 +327,7 @@ main {
 .hero-panel-grid {
   display: grid;
   grid-template-columns: minmax(186px, 0.98fr) minmax(0, 2.02fr);
-  gap: 5px;
+  gap: 10px;
   align-items: stretch;
 }
 
@@ -335,7 +335,7 @@ main {
 .hero-panel-directory {
   position: relative;
   overflow: hidden;
-  padding: 8px 10px;
+  padding: 12px 14px;
   border-radius: 18px;
   border: 1px solid rgba(31, 33, 29, 0.08);
   background: rgba(255, 255, 255, 0.48);
@@ -377,8 +377,8 @@ main {
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 4px;
-  margin-top: 1px;
+  gap: 8px;
+  margin-top: 4px;
 }
 
 .panel-link-card {
@@ -387,9 +387,9 @@ main {
   justify-content: space-between;
   flex: 1;
   width: 100%;
-  min-height: 46px;
+  min-height: 62px;
   gap: 10px;
-  padding: 7px 13px;
+  padding: 10px 16px;
   text-decoration: none;
   border: 1px solid rgba(31, 33, 29, 0.08);
   border-radius: 18px;
@@ -406,7 +406,7 @@ main {
 
 .panel-link-main {
   display: grid;
-  gap: 2px;
+  gap: 4px;
 }
 
 .panel-link-main strong {
@@ -426,20 +426,20 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 42px;
-  min-height: 24px;
+  min-width: 46px;
+  min-height: 28px;
   padding: 0 9px;
   border-radius: 999px;
   border: 1px solid rgba(31, 33, 29, 0.1);
   color: rgba(31, 33, 29, 0.66);
   background: rgba(255, 255, 255, 0.72);
-  font-size: 0.74rem;
+  font-size: 0.8rem;
 }
 
 .panel-note-box {
   display: grid;
-  gap: 6px;
-  padding: 5px 12px;
+  gap: 8px;
+  padding: 12px 14px;
   border-radius: 14px;
   border: 1px solid rgba(31, 33, 29, 0.08);
   background: rgba(255, 255, 255, 0.7);
@@ -447,19 +447,19 @@ main {
 
 .panel-note {
   color: var(--muted);
-  line-height: 1.34;
-  font-size: 0.7rem;
+  line-height: 1.5;
+  font-size: 0.76rem;
 }
 
 .panel-note-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .panel-drive-button {
-  min-height: 30px;
+  min-height: 34px;
 }
 
 .panel-drive-code {
