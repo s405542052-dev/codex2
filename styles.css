@@ -358,15 +358,12 @@ main {
 }
 
 .projects-shell {
-  display: grid;
-  grid-template-columns: 300px minmax(0, 1fr);
-  gap: 24px;
   margin-top: 34px;
 }
 
 .projects-stack {
   display: grid;
-  gap: 28px;
+  gap: 36px;
 }
 
 .projects-band {
@@ -387,20 +384,6 @@ main {
 .projects-subhead p:last-child {
   color: var(--muted);
   line-height: 1.8;
-}
-
-.projects-intro {
-  position: sticky;
-  top: 112px;
-  align-self: start;
-  display: grid;
-  gap: 12px;
-}
-
-.projects-intro h3 {
-  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
-  line-height: 1.18;
-  letter-spacing: -0.05em;
 }
 
 .project-gallery {
@@ -748,16 +731,6 @@ main {
   border-radius: 18px;
   background: #000;
   aspect-ratio: 16 / 9;
-}
-
-@media (max-width: 1180px) {
-  .projects-shell {
-    grid-template-columns: 1fr;
-  }
-
-  .projects-intro {
-    position: static;
-  }
 }
 
 @media (max-width: 1100px) {
