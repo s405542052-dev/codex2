@@ -149,8 +149,8 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(440px, 1fr);
-  gap: 22px;
+  grid-template-columns: minmax(0, 0.94fr) minmax(620px, 1.16fr);
+  gap: 12px;
   min-height: calc(100vh - 92px);
   align-items: center;
   padding-top: 94px;
@@ -276,15 +276,15 @@ main {
   align-self: center;
   justify-self: end;
   width: 100%;
-  max-width: 860px;
-  padding: 8px;
+  max-width: 1040px;
+  padding: 6px;
   border-radius: var(--radius-xl);
 }
 
 .hero-panel-shell {
   display: grid;
-  gap: 10px;
-  padding: 12px;
+  gap: 8px;
+  padding: 10px;
   border-radius: 34px;
   background:
     radial-gradient(circle at top right, rgba(201, 214, 188, 0.34), transparent 34%),
@@ -302,13 +302,13 @@ main {
 .hero-chip {
   display: inline-flex;
   align-items: center;
-  min-height: 38px;
-  padding: 0 16px;
+  min-height: 34px;
+  padding: 0 14px;
   border-radius: 999px;
   border: 1px solid rgba(31, 33, 29, 0.12);
   background: rgba(255, 255, 255, 0.62);
-  font-size: 0.74rem;
-  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: rgba(31, 33, 29, 0.56);
 }
@@ -320,16 +320,16 @@ main {
 
 .hero-panel-grid {
   display: grid;
-  grid-template-columns: minmax(170px, 1fr) minmax(0, 2fr);
-  gap: 12px;
+  grid-template-columns: minmax(148px, 0.9fr) minmax(0, 2.1fr);
+  gap: 10px;
 }
 
 .hero-panel-manifesto,
 .hero-panel-directory {
   position: relative;
   overflow: hidden;
-  padding: 16px;
-  border-radius: 24px;
+  padding: 14px;
+  border-radius: 22px;
   border: 1px solid rgba(31, 33, 29, 0.08);
   background: rgba(255, 255, 255, 0.48);
 }
@@ -347,8 +347,8 @@ main {
 
 .hero-panel-manifesto h2 {
   margin-top: 10px;
-  max-width: 3.4ch;
-  font-size: clamp(1.28rem, 1.45vw, 1.92rem);
+  max-width: 3.1ch;
+  font-size: clamp(1.12rem, 1.2vw, 1.58rem);
   line-height: 1.02;
   letter-spacing: -0.08em;
 }
@@ -366,19 +366,19 @@ main {
 
 .panel-links {
   display: grid;
-  gap: 8px;
-  margin-top: 8px;
+  gap: 7px;
+  margin-top: 6px;
 }
 
 .panel-link-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding: 12px 18px;
+  gap: 10px;
+  padding: 10px 16px;
   text-decoration: none;
   border: 1px solid rgba(31, 33, 29, 0.08);
-  border-radius: 20px;
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.68);
   transition: transform 180ms ease, background 180ms ease, color 180ms ease;
 }
@@ -396,13 +396,13 @@ main {
 
 .panel-link-main strong {
   font-family: "Noto Serif SC", serif;
-  font-size: 0.98rem;
+  font-size: 0.94rem;
 }
 
 .panel-link-main em {
   font-style: normal;
-  font-size: 0.74rem;
-  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgba(31, 33, 29, 0.42);
 }
@@ -411,29 +411,29 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 54px;
-  min-height: 34px;
-  padding: 0 11px;
+  min-width: 48px;
+  min-height: 30px;
+  padding: 0 9px;
   border-radius: 999px;
   border: 1px solid rgba(31, 33, 29, 0.1);
   color: rgba(31, 33, 29, 0.66);
   background: rgba(255, 255, 255, 0.72);
-  font-size: 0.88rem;
+  font-size: 0.82rem;
 }
 
 .panel-note-box {
   display: grid;
-  gap: 10px;
-  padding: 16px 18px;
-  border-radius: 20px;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 18px;
   border: 1px solid rgba(31, 33, 29, 0.08);
   background: rgba(255, 255, 255, 0.7);
 }
 
 .panel-note {
   color: var(--muted);
-  line-height: 1.7;
-  font-size: 0.88rem;
+  line-height: 1.58;
+  font-size: 0.82rem;
 }
 
 .panel-note-actions {
@@ -444,7 +444,7 @@ main {
 }
 
 .panel-drive-button {
-  min-height: 40px;
+  min-height: 36px;
 }
 
 .panel-drive-code {
