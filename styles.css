@@ -474,6 +474,13 @@ main {
   align-items: end;
 }
 
+.section-heading-side .section-kicker {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  color: rgba(31, 33, 29, 0.72);
+}
+
 .section-heading-main h2 {
   font-size: clamp(2rem, 4vw, 3.3rem);
   letter-spacing: -0.05em;
@@ -513,6 +520,13 @@ main {
 .projects-subhead {
   display: grid;
   gap: 8px;
+}
+
+.projects-subhead .section-kicker {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  color: rgba(31, 33, 29, 0.54);
 }
 
 .projects-subhead h4 {
