@@ -354,9 +354,9 @@ main {
 
 .hero-panel-manifesto h2 {
   margin-top: 8px;
-  max-width: 5.8ch;
+  max-width: 4.2ch;
   font-size: clamp(2rem, 2.15vw, 3.06rem);
-  line-height: 0.98;
+  line-height: 1.02;
   letter-spacing: -0.08em;
 }
 
